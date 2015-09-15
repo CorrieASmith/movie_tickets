@@ -1,7 +1,13 @@
-#priceResult {
+#result {
   display: none;
 }
 
-.jumbotron {
-  background-color: red;
+.jumbotron{
+  background: rgba(255, 254, 255, 0.6);
+
+}
+
+body {
+  background-image: url('http://theartmad.com/wp-content/uploads/2015/04/Movie-Theater-Popcorn-Wallpaper-3.jpg') no-repeat;
+
 }

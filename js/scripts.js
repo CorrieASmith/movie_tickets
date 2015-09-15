@@ -21,4 +21,26 @@ Ticket.prototype.ticketPrice = function() {
 
 };
 
-var movies = [//movies go in here ]
+$(document).ready(function() {
+  $("form#ticketType").submit(function(event){
+      event.preventDefault();
+
+      var selectedMovie = $("select#movieName").val();
+      var selectedTime = $("select#movieTime").val();
+      var selectedUser = $("select#movieUser").val();
+      var matinee = false;
+
+
+      if (selectedTime === "10:00 AM") {
+        matinee = true;
+      }
+
+      var newTicket = new Ticket(selectedUser, matinee);
+      var priceResult = newTicket.ticketPrice();
+      debugger;
+      $(".selectedMovie").text(selectedMovie);
+      $(".priceResult").text(priceResult);
+
+      $("#result").show();
+  });
+});
