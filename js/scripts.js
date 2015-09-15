@@ -20,3 +20,5 @@ Ticket.prototype.ticketPrice = function() {
   }
 
 };
+
+var movies = [//movies go in here ]
