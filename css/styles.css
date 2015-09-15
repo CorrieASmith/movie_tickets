@@ -1,13 +1,40 @@
 #result {
   display: none;
+  color: #468499;
+  text-align: center;
+  font-size: 400px;
 }
 
-.jumbotron{
+#formTron{
   background: rgba(255, 254, 255, 0.6);
 
 }
 
 body {
-  background-image: url('http://theartmad.com/wp-content/uploads/2015/04/Movie-Theater-Popcorn-Wallpaper-3.jpg') no-repeat;
+  background-image: url("seats.jpg");
+  background-size: cover;
+  font-family: 'Amatic SC', cursive;
 
+}
+
+#resultTron{
+  background-image: url("poppity.jpg");
+}
+
+
+h1 {
+font-size: 150px;
+}
+
+.col-md-4{
+  text-align: center;
+}
+
+p.myp, span{
+  font-size: 100px;
+}
+
+p {
+  font-size: 1px;
+  color: white;
 }
