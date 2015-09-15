@@ -18,8 +18,13 @@ Ticket.prototype.ticketPrice = function() {
   if (this.matinee === true) {
     return "$6.50";
   }
-
 };
+
+function resetSelect() {
+  $("select#movieName").val("");
+  $("select#movieTime").val("");
+  $("select#movieUser").val("");
+}
 
 $(document).ready(function() {
   $("form#ticketType").submit(function(event){
@@ -30,14 +35,15 @@ $(document).ready(function() {
       var selectedUser = $("select#movieUser").val();
       var matinee = false;
 
-
       if (selectedTime === "10:00 AM") {
         matinee = true;
       }
 
       var newTicket = new Ticket(selectedUser, matinee);
       var priceResult = newTicket.ticketPrice();
-      debugger;
+
+      resetSelect();
+
       $(".selectedMovie").text(selectedMovie);
       $(".priceResult").text(priceResult);
 
